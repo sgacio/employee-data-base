@@ -2,18 +2,18 @@ import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 
-const AddEmployeePage = () => {
+const UpdateInformation = props => {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
   const [phoneNumber, setPhoneNumber] = useState('')
   const [jobTitle, setJobTitle] = useState('')
-  const [success, setSuccess] = useState(false)
+  // const [success, setSuccess] = useState(false)
   // const [person, setPerson] = useState({})
 
-  const postCall = async e => {
-    const resp = await axios.post(
-      'https://sdg-staff-directory-app.herokuapp.com/api/HomelessMagicians/Employees',
+  const putCall = async e => {
+    const resp = await axios.put(
+      `https://sdg-staff-directory-app.herokuapp.com/api/HomelessMagicians/Employees/${props.match.params.result}`,
 
       {
         firstName,
@@ -25,18 +25,12 @@ const AddEmployeePage = () => {
     )
   }
 
-  const changeSuccess = () => {
-    setSuccess(true)
-  }
-
-  // const [person, setPerson] = useState({})
-
   return (
     <>
       <form
         onSubmit={e => {
           e.preventDefault()
-          postCall()
+          putCall()
         }}
         className="form-container"
       >
@@ -70,7 +64,6 @@ const AddEmployeePage = () => {
             }}
           />
         </section>
-        {/* {console.log(person)} */}
         <section className="phone-number">
           <input
             type="text"
@@ -92,15 +85,11 @@ const AddEmployeePage = () => {
           />
         </section>
         <section>
-          <button onClick={changeSuccess}>Engage With New Hire</button>
-          {success === false && <p></p>}
-          {success === true && (
-            <p>Your Submission Was Successful, Please Return Home</p>
-          )}
+          <button>Update Employee Information</button>
         </section>
       </form>
     </>
   )
 }
 
-export default AddEmployeePage
+export default UpdateInformation

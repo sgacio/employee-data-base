@@ -9,4 +9,86 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+  background-color: aquamarine;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(180, 66, 89);
+}
+
+.company-name {
+  font-size: 1.5rem;
+  font-weight: 900;
+  background-color: rgb(97, 97, 202);
+  width: 40rem;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  left: 27rem;
+  border-radius: 10px;
+}
+
+.sub-container {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.link-one {
+  margin: 1rem;
+}
+
+.u-l-container {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.l-i-employee {
+  background-color: yellowgreen;
+  text-align: center;
+  border-radius: 10px;
+  height: 5rem;
+  width: 20rem;
+  margin: 2rem;
+  position: relative;
+  left: 9rem;
+}
+
+.employee-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+}
+
+.form-container {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.first-name {
+  margin: 1rem;
+}
+
+.last-name {
+  margin: 1rem;
+}
+
+.email {
+  margin: 1rem;
+}
+
+.phone-number {
+  margin: 1rem;
+}
+
+.job-title {
+  margin: 1rem;
+}
+
+.employee-container {
+  font-weight: 900;
+  text-align: center;
 }

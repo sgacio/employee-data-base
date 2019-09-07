@@ -19,14 +19,14 @@ const ViewAllEmployeesPage = () => {
   }, [])
   return (
     <>
-      <ul>
+      <ul className="u-l-container">
         {companyList.map((result, i) => {
           return (
-            <li key={i}>
+            <li className="l-i-employee" key={i}>
               <Link to={`/${result.id}`}>
                 <p>{result.firstName}</p>
+                <p>{result.lastName}</p>
               </Link>
-              <p>{result.lastName}</p>
             </li>
           )
         })}
