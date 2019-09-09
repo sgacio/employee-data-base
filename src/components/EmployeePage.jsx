@@ -31,7 +31,7 @@ const EmployeePage = props => {
       <p>{employee.lastName}</p>
       <p>Email: {employee.email}</p>
       <p>Phone Number: {employee.phoneNumber}</p>
-      <p>Job Title: {employee.JobTitle}</p>
+      <p>Job Title: {employee.jobTitle}</p>
       <p>Company Name: {employee.companyKey}</p>
       <p>PTO Hours: {employee.ptoHours}</p>
       <p>Salary: {employee.salary}</p>
