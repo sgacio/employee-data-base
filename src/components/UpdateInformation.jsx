@@ -8,6 +8,7 @@ const UpdateInformation = props => {
   const [email, setEmail] = useState('')
   const [phoneNumber, setPhoneNumber] = useState('')
   const [jobTitle, setJobTitle] = useState('')
+  const [id, setId] = useState(props.match.params.result)
   // const [success, setSuccess] = useState(false)
   // const [person, setPerson] = useState({})
 
@@ -16,6 +17,7 @@ const UpdateInformation = props => {
       `https://sdg-staff-directory-app.herokuapp.com/api/HomelessMagicians/Employees/${props.match.params.result}`,
 
       {
+        id,
         firstName,
         lastName,
         email,
